@@ -1,5 +1,5 @@
 //
-//  UIAlert + Extensions.swift
+//  UIViewController + Extensions.swift
 //  Navigation
 //
 //  Created by temaathletic on 13.11.2022.
@@ -10,13 +10,44 @@ import UIKit
 extension UIViewController {
     
     func presentSimpleAlert(title: String, message: String?) {
-
+        
         let alertController = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ок", style: .default)
+        
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+            
+            switch action.style {
+                
+            case .default:
+                print("Ok")
+                
+            case .cancel:
+                print("Cancel")
+                
+            case .destructive:
+                print("destructive")
+            }}))
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { action in
+            
+            switch action.style{ 
+                 
+            case .default:
+                print("Cancel")
+                
+            case .cancel:
+                print("Cancel")
+                
+            case .destructive:
+                print("destructive")
+            }}))
+        
 
-        alertController.addAction(okAction)
+        
         present(alertController, animated: true)
     }
 }
+
+
+
