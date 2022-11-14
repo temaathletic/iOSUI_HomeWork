@@ -28,6 +28,6 @@ class PostViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItems = [button]
-        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
     }
 }

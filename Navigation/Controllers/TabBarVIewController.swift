@@ -19,6 +19,9 @@ class TabBarVIewController: UITabBarController {
     private func setupView() {
         setupTabBarItem()
         setTabBarAppearnce()
+        
+        
+//        UINavigationBar.appearance().backgroundColor = .green
     }
     
     private func setupTabBarItem() {
@@ -40,6 +43,7 @@ class TabBarVIewController: UITabBarController {
         viewController.tabBarItem.image = image
         viewController.navigationItem.title = pageName
         
+        
         return viewController
     }
     
@@ -51,6 +55,9 @@ class TabBarVIewController: UITabBarController {
         let height = tabBar.bounds.height + positionOnY * 2
         
         let roundLayer = CAShapeLayer()
+        roundLayer.shadowColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        roundLayer.shadowRadius = 15
+        roundLayer.shadowOpacity = 5
         
         let bezierPath = UIBezierPath(roundedRect: CGRect(x: positionOnX, y: tabBar.bounds.minY - positionOnY, width: width, height: height), cornerRadius: height / 2)
         roundLayer.path = bezierPath.cgPath

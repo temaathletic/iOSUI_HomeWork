@@ -5,4 +5,9 @@
 //  Created by temaathletic on 13.11.2022.
 //
 
-import Foundation
+import UIKit
+
+class ProfileHeaderView: UIView {
+    
+    
+}

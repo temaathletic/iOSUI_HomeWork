@@ -28,16 +28,14 @@ class InfoViewController: UIViewController {
         button.layer.cornerRadius = 20
         button.center = CGPoint(x: 215, y: 466)
         
-        button.addTarget(self, action: #selector(self.showPost), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.rightBarButton), for: .touchUpInside)
         
         return button
     }()
     
     
-    @objc private func showPost() {
+    @objc private func rightBarButton() {
         presentSimpleAlert(title: "In Development", message: "Soon...")
-        
-        
     }
     
     override func viewDidLoad() {
@@ -45,7 +43,7 @@ class InfoViewController: UIViewController {
         
         view.addSubview(button)
         view.addSubview(titleLabel)
-        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
     }
     
 }

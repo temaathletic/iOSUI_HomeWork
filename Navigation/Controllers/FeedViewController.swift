@@ -13,9 +13,12 @@ class FeedViewController: UIViewController {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 140, height: 50))
         button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         button.setTitle("Show Post", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1), for: .normal)
         button.layer.cornerRadius = 20
         button.center = CGPoint(x: 215, y: 466)
+        button.layer.shadowColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        button.layer.shadowRadius = 15
+        button.layer.shadowOpacity = 5
         
         button.addTarget(self, action: #selector(self.showPost), for: .touchUpInside)
         
@@ -29,6 +32,15 @@ class FeedViewController: UIViewController {
         let post = Post()
         postScene.title = post.title
     }
+    
+    private var lineView: UIView = {
+        var lineView = UIView(frame: CGRect(x: 0, y: 0, width: 430, height: 1.0))
+        lineView.center = CGPoint(x: 215, y: 105)
+        lineView.layer.borderWidth = 1.0
+        lineView.layer.borderColor = UIColor.gray.cgColor
+        
+        return lineView
+    }()
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 21))
@@ -45,8 +57,9 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         
         view.addSubview(titleLabel)
+        view.addSubview(lineView)
         view.addSubview(button)
-        view.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
     }
 
 }
