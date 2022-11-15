@@ -9,19 +9,18 @@ import UIKit
 
 class TabBarVIewController: UITabBarController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
     }
     
-    
     private func setupView() {
+        
         setupTabBarItem()
         setTabBarAppearnce()
-        
-        
-//        UINavigationBar.appearance().backgroundColor = .green
+
     }
     
     private func setupTabBarItem() {
@@ -69,6 +68,5 @@ class TabBarVIewController: UITabBarController {
         tabBar.tintColor = .tabBarItemAccent
         tabBar.unselectedItemTintColor = .tabBarItemLight
     }
-    
     
 }

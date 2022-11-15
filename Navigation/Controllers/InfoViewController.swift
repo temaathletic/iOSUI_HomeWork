@@ -33,17 +33,21 @@ class InfoViewController: UIViewController {
         return button
     }()
     
-    
-    @objc private func rightBarButton() {
-        presentSimpleAlert(title: "In Development", message: "Soon...")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupView()
+    }
+    
+    private func setupView() {
         
         view.addSubview(button)
         view.addSubview(titleLabel)
         view.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
+    }
+    
+    @objc private func rightBarButton() {
+        presentSimpleAlert(title: "In Development", message: "Soon...")
     }
     
 }

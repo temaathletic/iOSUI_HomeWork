@@ -41,15 +41,6 @@ class ProfileViewController: UIViewController {
         return button
     }()
     
-    @objc func setStatus() {
-        
-        if let text = statusTextField.text
-            {
-            statusLabel.text = text
-            }
-        
-    }
-    
     private var statusLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 155, height: 50))
         label.center = CGPoint(x: 262, y: 230)
@@ -111,10 +102,8 @@ class ProfileViewController: UIViewController {
         return view
     }()
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    private func setupView() {
+
         view.addSubview(viewVC)
         view.addSubview(pageTitleLabel)
         view.addSubview(lineView)
@@ -123,18 +112,23 @@ class ProfileViewController: UIViewController {
         view.addSubview(statusLabel)
         view.addSubview(statusButton)
         view.addSubview(statusTextField)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         
         setupView()
     }
     
-    private func setupView() {
-
-//        view.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
+    @objc func setStatus() {
         
-        NSLayoutConstraint.activate([
-//            myView.topAnchor.constraint(equalTo: self.titleLabel.topAnchor, constant: 16),
-//            myView.rightAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: 20),
-//            myView.centerYAnchor.constraint(equalTo: ),
-        ])
+        if let text = statusTextField.text
+            {
+            statusLabel.text = text
+            }
+        
     }
+    
+    
 }

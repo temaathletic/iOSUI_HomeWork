@@ -25,14 +25,6 @@ class FeedViewController: UIViewController {
         return button
     }()
     
-    
-    @objc private func showPost() {
-        let postScene = PostViewController()
-        self.navigationController?.pushViewController(postScene, animated: true)
-        let post = Post()
-        postScene.title = post.title
-    }
-    
     private var lineView: UIView = {
         var lineView = UIView(frame: CGRect(x: 0, y: 0, width: 430, height: 1.0))
         lineView.center = CGPoint(x: 215, y: 105)
@@ -56,10 +48,23 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
+    }
+    
+    private func setupView() {
+        
         view.addSubview(titleLabel)
         view.addSubview(lineView)
         view.addSubview(button)
         view.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
+        
+    }
+    
+    @objc private func showPost() {
+        let postScene = PostViewController()
+        self.navigationController?.pushViewController(postScene, animated: true)
+        let post = Post()
+        postScene.title = post.title
     }
 
 }
