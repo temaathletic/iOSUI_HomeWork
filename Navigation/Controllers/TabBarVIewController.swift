@@ -14,13 +14,12 @@ class TabBarVIewController: UITabBarController {
         super.viewDidLoad()
         
         setupView()
-        
     }
     
     private func setupView() {
         
         setupTabBarItem()
-        setTabBarAppearance()
+        setTabBarAppearnce()
 
     }
     
@@ -47,7 +46,7 @@ class TabBarVIewController: UITabBarController {
         return viewController
     }
     
-    private func setTabBarAppearance() {
+    private func setTabBarAppearnce() {
         
         let positionOnX: CGFloat = 25
         let positionOnY: CGFloat = 10
@@ -68,7 +67,6 @@ class TabBarVIewController: UITabBarController {
         roundLayer.fillColor = UIColor.MainWhite.cgColor
         tabBar.tintColor = .tabBarItemAccent
         tabBar.unselectedItemTintColor = .tabBarItemLight
-        
     }
     
 }
