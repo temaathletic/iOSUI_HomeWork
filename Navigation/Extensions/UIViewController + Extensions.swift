@@ -13,11 +13,11 @@ extension UIViewController {
         
         let alertController = UIAlertController(title: title,
                                                 message: message,
-                                                preferredStyle: .actionSheet)
+                                                preferredStyle: .alert)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        let okAction = UIAlertAction(title: "Ok", style: .default)
-    
+        let okAction = UIAlertAction(title: "Ok", style: .default) {_ in print("Нажата кнопка 'Действие один'")}
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) {_ in print("Нажата кнопка 'Действие два'")}
+        
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)
         
