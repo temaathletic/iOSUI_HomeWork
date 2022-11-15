@@ -12,7 +12,7 @@ class PostViewController: UIViewController {
     private lazy var button: UIBarButtonItem = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "book.fill"), for: .normal)
-        button.addTarget(self, action: #selector(showInfo), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.showInfo), for: .touchUpInside)
         let button1 = UIBarButtonItem()
         button1.customView = button
         
@@ -34,8 +34,7 @@ class PostViewController: UIViewController {
     
     @objc private func showInfo() {
         let postScene = InfoViewController()
-        postScene.modalPresentationStyle = .popover
-        self.present(postScene, animated: true)
+        self.navigationController?.pushViewController(postScene, animated: true)
     }
     
 }
