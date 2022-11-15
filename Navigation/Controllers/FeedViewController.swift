@@ -38,6 +38,7 @@ class FeedViewController: UIViewController {
         return button
     }()
     
+<<<<<<< HEAD
     private lazy var button2: UIButton = {
         let button = UIButton()
         button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -48,6 +49,21 @@ class FeedViewController: UIViewController {
         button.layer.shadowRadius = 15
         button.layer.shadowOpacity = 5
         button.translatesAutoresizingMaskIntoConstraints = false
+=======
+    
+    @objc private func showPost() {
+        let postScene = PostViewController()
+        self.navigationController?.pushViewController(postScene, animated: true)
+        let post = Post()
+        postScene.title = post.title
+    }
+    
+    private var lineView: UIView = {
+        var lineView = UIView(frame: CGRect(x: 0, y: 0, width: 430, height: 1.0))
+        lineView.center = CGPoint(x: 215, y: 105)
+        lineView.layer.borderWidth = 1.0
+        lineView.layer.borderColor = UIColor.gray.cgColor
+>>>>>>> parent of 14234a5 (Изменил структуру и навел порядок)
         
         button.addTarget(self, action: #selector(showPost), for: .touchUpInside)
         
@@ -76,15 +92,20 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+<<<<<<< HEAD
         setupView()
     }
     
     private func setupView() {
         
         view.addSubview(stackView)
+=======
+        view.addSubview(titleLabel)
+>>>>>>> parent of 14234a5 (Изменил структуру и навел порядок)
         view.addSubview(lineView)
         view.addSubview(pageTitleLabel)
         view.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
+<<<<<<< HEAD
         
         NSLayoutConstraint.activate([
             
@@ -111,6 +132,8 @@ class FeedViewController: UIViewController {
         self.navigationController?.pushViewController(postScene, animated: true)
         let post = Post()
         postScene.title = post.title
+=======
+>>>>>>> parent of 14234a5 (Изменил структуру и навел порядок)
     }
     
 }

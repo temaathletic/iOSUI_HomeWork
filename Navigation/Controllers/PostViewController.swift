@@ -19,23 +19,16 @@ class PostViewController: UIViewController {
         return button1
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupView()
-    }
-    
-    private func setupView() {
-        
-        navigationItem.rightBarButtonItems = [button]
-        view.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
-        
-    }
-    
     @objc private func showInfo() {
         let postScene = InfoViewController()
         postScene.modalPresentationStyle = .popover
         self.present(postScene, animated: true)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.rightBarButtonItems = [button]
+        view.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
+    }
 }
