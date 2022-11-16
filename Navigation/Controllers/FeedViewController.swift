@@ -24,7 +24,7 @@ class FeedViewController: UIViewController {
     
     private lazy var button1: UIButton = {
         let button = UIButton()
-        button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
         button.setTitle("Show Post #1", for: .normal)
         button.setTitleColor(#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), for: .normal)
         button.layer.cornerRadius = 20
@@ -40,7 +40,7 @@ class FeedViewController: UIViewController {
     
     private lazy var button2: UIButton = {
         let button = UIButton()
-        button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
         button.setTitle("Show Post #2", for: .normal)
         button.setTitleColor(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1), for: .normal)
         button.layer.cornerRadius = 20
@@ -48,6 +48,8 @@ class FeedViewController: UIViewController {
         button.layer.shadowRadius = 15
         button.layer.shadowOpacity = 5
         button.translatesAutoresizingMaskIntoConstraints = false
+        
+        button.addTarget(self, action: #selector(showPost), for: .touchUpInside)
      
         return button
     }()

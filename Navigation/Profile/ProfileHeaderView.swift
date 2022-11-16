@@ -7,7 +7,43 @@
 
 import UIKit
 
-class ProfileHeaderView: UIView {
+class ProfileHeaderView: UITableViewHeaderFooterView {
+    
+    private var avatarImage: UIImageView = {
+        let imageName = "ava"
+        let image = UIImage(named: imageName)
+        let imageView = UIImageView(image: image!)
+        
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 75
+        imageView.layer.borderWidth = 3
+        imageView.layer.borderColor = CGColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
+        imageView.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return imageView
+    }()
+    
+    private var nameLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .left
+        label.text = "Kawaii Dog"
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
+    }()
+    
+    private var statusLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .left
+        label.text = "Waiting for something..."
+        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.textColor = .gray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
+    }()
     
     private var statusTextField: UITextField = {
         let field = UITextField()
@@ -41,63 +77,8 @@ class ProfileHeaderView: UIView {
         return button
     }()
     
-    private var statusLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .left
-        label.text = "Waiting for something..."
-        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        label.textColor = .gray
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
-    
-    private var nameLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .left
-        label.text = "Kawaii Dog"
-        label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
-    
-    private var avatarImage: UIImageView = {
-        let imageName = "ava"
-        let image = UIImage(named: imageName)
-        let imageView = UIImageView(image: image!)
-        
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 75
-        imageView.layer.borderWidth = 3
-        imageView.layer.borderColor = CGColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
-        imageView.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return imageView
-    }()
-    
-    private var pageTitleLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.text = "Profile"
-        label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
-    
-    private var lineView: UIView = {
-        var lineView = UIView()
-        lineView.layer.borderWidth = 1.0
-        lineView.layer.borderColor = UIColor.gray.cgColor
-        lineView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return lineView
-    }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
         
         setupView()
     }
@@ -108,15 +89,16 @@ class ProfileHeaderView: UIView {
     
     private func setupView() {
         
-        addSubview(lineView)
+        
+        
         addSubview(avatarImage)
         addSubview(nameLabel)
         addSubview(statusLabel)
         addSubview(statusButton)
         addSubview(statusTextField)
-        addSubview(pageTitleLabel)
         
         NSLayoutConstraint.activate([
+            
             avatarImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
             avatarImage.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
             avatarImage.heightAnchor.constraint(equalToConstant: 150),
@@ -127,16 +109,6 @@ class ProfileHeaderView: UIView {
             nameLabel.heightAnchor.constraint(lessThanOrEqualToConstant: 20),
             nameLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 110),
             
-            lineView.leftAnchor.constraint(equalTo: leftAnchor, constant: 0),
-            lineView.rightAnchor.constraint(equalTo: rightAnchor, constant: 0),
-            lineView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            lineView.heightAnchor.constraint(equalToConstant: 1),
-            
-            statusButton.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
-            statusButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
-            statusButton.topAnchor.constraint(equalTo: avatarImage.bottomAnchor, constant: 16),
-            statusButton.heightAnchor.constraint(equalToConstant: 45),
-            
             statusLabel.leftAnchor.constraint(equalTo: avatarImage.rightAnchor, constant: 20),
             statusLabel.bottomAnchor.constraint(equalTo: statusButton.topAnchor, constant: -75),
             statusLabel.heightAnchor.constraint(equalToConstant: 20),
@@ -146,9 +118,11 @@ class ProfileHeaderView: UIView {
             statusTextField.leftAnchor.constraint(equalTo: avatarImage.rightAnchor, constant: 20),
             statusTextField.heightAnchor.constraint(equalToConstant: 45),
             
-            pageTitleLabel.heightAnchor.constraint(equalToConstant: 20),
-            pageTitleLabel.bottomAnchor.constraint(equalTo: lineView.topAnchor, constant: -15),
-            pageTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
+            statusButton.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
+            statusButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
+            statusButton.topAnchor.constraint(equalTo: avatarImage.bottomAnchor, constant: 16),
+            statusButton.heightAnchor.constraint(equalToConstant: 45),
+            statusButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5)
         ])
     }
     
