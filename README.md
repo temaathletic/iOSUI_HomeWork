@@ -1,4 +1,4 @@
-# HomeWork/2.2
+# HomeWork/2.1
 
 
 ![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-15 at 08 03 32](https://user-images.githubusercontent.com/101665702/202133302-0968b494-f24f-4a7d-a285-4b94c2299357.png)
