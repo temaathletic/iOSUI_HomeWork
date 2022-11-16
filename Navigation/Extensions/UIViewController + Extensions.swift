@@ -13,37 +13,13 @@ extension UIViewController {
         
         let alertController = UIAlertController(title: title,
                                                 message: message,
-                                                preferredStyle: .alert)
+                                                preferredStyle: .actionSheet)
         
-        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
-            
-            switch action.style {
-                
-            case .default:
-                print("Ok")
-                
-            case .cancel:
-                print("Cancel")
-                
-            case .destructive:
-                print("destructive")
-            }}))
-        
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { action in
-            
-            switch action.style{ 
-                 
-            case .default:
-                print("Cancel")
-                
-            case .cancel:
-                print("Cancel")
-                
-            case .destructive:
-                print("destructive")
-            }}))
-        
-
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+    
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
         
         present(alertController, animated: true)
     }

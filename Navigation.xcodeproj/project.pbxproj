@@ -19,6 +19,7 @@
 		84BA4F9C292138C100CE8C7E /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA4F9B292138C100CE8C7E /* UIColor + Extensions.swift */; };
 		84BA4F9E29213A5000CE8C7E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA4F9D29213A5000CE8C7E /* InfoViewController.swift */; };
 		84BA4FA0292149DD00CE8C7E /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA4F9F292149DD00CE8C7E /* UIViewController + Extensions.swift */; };
+		84BA4FA329217F0600CE8C7E /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA4FA229217F0600CE8C7E /* ProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		84BA4F9B292138C100CE8C7E /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
 		84BA4F9D29213A5000CE8C7E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		84BA4F9F292149DD00CE8C7E /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
+		84BA4FA229217F0600CE8C7E /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				84BA4F902921261200CE8C7E /* Application */,
+				84BA4FA129217ED200CE8C7E /* Profile */,
 				84BA4F8F2921260300CE8C7E /* Controllers */,
 				84BA4F962921295700CE8C7E /* Resource */,
 				84BA4F952921277F00CE8C7E /* Extensions */,
@@ -93,7 +96,6 @@
 				84BA4F912921275000CE8C7E /* TabBarVIewController.swift */,
 				84BA4F9D29213A5000CE8C7E /* InfoViewController.swift */,
 				84BA4F7E292125E100CE8C7E /* FeedViewController.swift */,
-				84BA4F932921275E00CE8C7E /* ProfileViewController.swift */,
 				84BA4F99292129B900CE8C7E /* PostViewController.swift */,
 			);
 			path = Controllers;
@@ -123,6 +125,15 @@
 				84BA4F972921296700CE8C7E /* Post.swift */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		84BA4FA129217ED200CE8C7E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				84BA4F932921275E00CE8C7E /* ProfileViewController.swift */,
+				84BA4FA229217F0600CE8C7E /* ProfileHeaderView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 			files = (
 				84BA4FA0292149DD00CE8C7E /* UIViewController + Extensions.swift in Sources */,
 				84BA4F922921275000CE8C7E /* TabBarVIewController.swift in Sources */,
+				84BA4FA329217F0600CE8C7E /* ProfileHeaderView.swift in Sources */,
 				84BA4F7F292125E100CE8C7E /* FeedViewController.swift in Sources */,
 				84BA4F9A292129B900CE8C7E /* PostViewController.swift in Sources */,
 				84BA4F942921275E00CE8C7E /* ProfileViewController.swift in Sources */,
