@@ -22,6 +22,10 @@
 		84BA4F9E29213A5000CE8C7E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA4F9D29213A5000CE8C7E /* InfoViewController.swift */; };
 		84BA4FA0292149DD00CE8C7E /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA4F9F292149DD00CE8C7E /* UIViewController + Extensions.swift */; };
 		84BA4FA329217F0600CE8C7E /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA4FA229217F0600CE8C7E /* ProfileHeaderView.swift */; };
+		84CA5545292559690005F932 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA5544292559690005F932 /* PhotosTableViewCell.swift */; };
+		84CA5547292559CE0005F932 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA5546292559CE0005F932 /* PhotosViewController.swift */; };
+		84CA554929255B660005F932 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA554829255B660005F932 /* PhotosCollectionViewCell.swift */; };
+		84CA554B29255EC00005F932 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA554A29255EC00005F932 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		84BA4F9D29213A5000CE8C7E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		84BA4F9F292149DD00CE8C7E /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
 		84BA4FA229217F0600CE8C7E /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		84CA5544292559690005F932 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
+		84CA5546292559CE0005F932 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		84CA554829255B660005F932 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		84CA554A29255EC00005F932 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +146,10 @@
 				84BA4FA229217F0600CE8C7E /* ProfileHeaderView.swift */,
 				845103AE2924E65C000403B7 /* LogInViewController.swift */,
 				845103B0292515C4000403B7 /* PostTableViewCell.swift */,
+				84CA5544292559690005F932 /* PhotosTableViewCell.swift */,
+				84CA5546292559CE0005F932 /* PhotosViewController.swift */,
+				84CA554829255B660005F932 /* PhotosCollectionViewCell.swift */,
+				84CA554A29255EC00005F932 /* Constants.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -213,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84BA4FA0292149DD00CE8C7E /* UIViewController + Extensions.swift in Sources */,
+				84CA554B29255EC00005F932 /* Constants.swift in Sources */,
 				84BA4F922921275000CE8C7E /* TabBarVIewController.swift in Sources */,
 				845103B1292515C4000403B7 /* PostTableViewCell.swift in Sources */,
 				84BA4FA329217F0600CE8C7E /* ProfileHeaderView.swift in Sources */,
@@ -220,9 +233,12 @@
 				84BA4F9A292129B900CE8C7E /* PostViewController.swift in Sources */,
 				84BA4F942921275E00CE8C7E /* ProfileViewController.swift in Sources */,
 				84BA4F9E29213A5000CE8C7E /* InfoViewController.swift in Sources */,
+				84CA5545292559690005F932 /* PhotosTableViewCell.swift in Sources */,
+				84CA5547292559CE0005F932 /* PhotosViewController.swift in Sources */,
 				84BA4F982921296700CE8C7E /* Post.swift in Sources */,
 				845103AF2924E65C000403B7 /* LogInViewController.swift in Sources */,
 				84BA4F9C292138C100CE8C7E /* UIColor + Extensions.swift in Sources */,
+				84CA554929255B660005F932 /* PhotosCollectionViewCell.swift in Sources */,
 				84BA4F7B292125E100CE8C7E /* AppDelegate.swift in Sources */,
 				84BA4F7D292125E100CE8C7E /* SceneDelegate.swift in Sources */,
 			);
