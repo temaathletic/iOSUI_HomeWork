@@ -50,6 +50,8 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         field.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         field.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         field.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        field.placeholder = "Set status"
         field.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         field.layer.borderWidth = 1
         field.layer.cornerRadius = 12
@@ -89,13 +91,12 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
     
     private func setupView() {
         
-        
-        
         addSubview(avatarImage)
         addSubview(nameLabel)
         addSubview(statusLabel)
         addSubview(statusButton)
         addSubview(statusTextField)
+        
         
         NSLayoutConstraint.activate([
             

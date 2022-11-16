@@ -69,7 +69,6 @@ class PhotosTableViewCell: UITableViewCell {
         
         func setupView(){
             contentView.addSubview(miniTitle)
-            //contentView.addSubview(imageMini)
             contentView.addSubview(imageArrow)
             contentView.addSubview(miniImage1)
             contentView.addSubview(miniImage2)
@@ -78,7 +77,6 @@ class PhotosTableViewCell: UITableViewCell {
             
             let widthImage = (UIScreen.main.bounds.width-48)/4
             let heightImage = widthImage
-            print(widthImage, "", heightImage)
             
             NSLayoutConstraint.activate([
                 miniTitle.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
