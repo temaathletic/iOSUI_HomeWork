@@ -13,7 +13,7 @@ extension UIViewController {
         
         let alertController = UIAlertController(title: title,
                                                 message: message,
-                                                preferredStyle: .actionSheet)
+                                                preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         let okAction = UIAlertAction(title: "Ok", style: .default)

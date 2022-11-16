@@ -29,7 +29,6 @@ class ProfileViewController: UIViewController {
     
     private func setupView() {
         
-        title = "Profile"
         view.addSubview(myView)
         
         NSLayoutConstraint.activate([

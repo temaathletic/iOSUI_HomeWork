@@ -105,8 +105,6 @@ class FeedViewController: UIViewController {
     @objc private func showPost() {
         let postScene = PostViewController()
         self.navigationController?.pushViewController(postScene, animated: true)
-        let post = Post()
-        postScene.title = post.title
     }
 
 }

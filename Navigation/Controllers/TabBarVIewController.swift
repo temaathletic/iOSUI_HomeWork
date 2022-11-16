@@ -24,7 +24,7 @@ class TabBarVIewController: UITabBarController {
             createTabBarItem(viewController: FeedViewController(),
                              title: "Feed",
                              image: UIImage(systemName: "newspaper.circle.fill"), pageName: "Feed"),
-            createTabBarItem(viewController: ProfileViewController(),
+            createTabBarItem(viewController: LogInViewController(),
                              title: "Profile",
                              image: UIImage(systemName: "person.circle.fill"), pageName: "Profile")
         ]
