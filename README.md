@@ -1,8 +1,5 @@
-# HomeWork/2.2
+# HomeWork/2.5
 
-1. Не смог привязать TabBar - исправлю.
 
-![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-15 at 21 12 36](https://user-images.githubusercontent.com/101665702/201996875-49c5feea-b60f-4e7f-8d61-326f1e1eb935.png)
-![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-15 at 21 12 41](https://user-images.githubusercontent.com/101665702/201996879-38637da6-f611-4405-8761-2becf1d7fd3d.png)
-![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-15 at 21 12 48](https://user-images.githubusercontent.com/101665702/201996880-9d8b7c1e-b046-46f8-972a-b718dc1a25e3.png)
-![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-15 at 21 12 32](https://user-images.githubusercontent.com/101665702/201996882-3f4cd5c5-a012-4a63-9ab8-dfe3390ffe6c.png)
+![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-16 at 21 35 44](https://user-images.githubusercontent.com/101665702/202264652-899699df-72f5-439f-855e-83b6018cd44c.png)
+![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-16 at 21 35 48](https://user-images.githubusercontent.com/101665702/202264690-e8663466-e045-46f2-afbe-dab7c4944a4b.png)
