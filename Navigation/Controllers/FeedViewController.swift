@@ -58,6 +58,23 @@ class FeedViewController: UIViewController {
         view.addSubview(button)
         view.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
         
+        NSLayoutConstraint.activate([
+            
+            lineView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
+            lineView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
+            lineView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            lineView.heightAnchor.constraint(equalToConstant: 1),
+            
+            pageTitleLabel.heightAnchor.constraint(equalToConstant: 20),
+            pageTitleLabel.bottomAnchor.constraint(equalTo: lineView.topAnchor, constant: -15),
+            pageTitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackView.heightAnchor.constraint(equalToConstant: 100),
+            stackView.widthAnchor.constraint(equalToConstant: 140)
+        ])
     }
     
     @objc private func showPost() {
