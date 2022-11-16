@@ -24,26 +24,18 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         setupView()
     }
     
     private func setupView() {
         
-        
         title = "Profile"
         view.addSubview(myView)
-        
         
         NSLayoutConstraint.activate([
             myView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             myView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             myView.heightAnchor.constraint(equalToConstant: 932)
-            
-            
-            
         ])
     }
-    
-    
 }

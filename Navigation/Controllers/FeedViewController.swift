@@ -102,7 +102,6 @@ class FeedViewController: UIViewController {
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             stackView.heightAnchor.constraint(equalToConstant: 100),
             stackView.widthAnchor.constraint(equalToConstant: 140)
-            
         ])
     }
     

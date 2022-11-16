@@ -13,15 +13,8 @@ class TabBarVIewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupView()
-        
-    }
-    
-    private func setupView() {
-        
         setupTabBarItem()
         setTabBarAppearance()
-
     }
     
     private func setupTabBarItem() {
@@ -68,7 +61,5 @@ class TabBarVIewController: UITabBarController {
         roundLayer.fillColor = UIColor.MainWhite.cgColor
         tabBar.tintColor = .tabBarItemAccent
         tabBar.unselectedItemTintColor = .tabBarItemLight
-        
     }
-    
 }

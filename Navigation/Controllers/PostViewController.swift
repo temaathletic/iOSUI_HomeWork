@@ -22,14 +22,8 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupView()
-    }
-    
-    private func setupView() {
-        
         navigationItem.rightBarButtonItems = [button]
         view.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
-        
     }
     
     @objc private func showInfo() {
@@ -37,5 +31,4 @@ class PostViewController: UIViewController {
         postScene.modalPresentationStyle = .popover
         self.present(postScene, animated: true)
     }
-    
 }

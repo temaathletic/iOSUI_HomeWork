@@ -41,15 +41,6 @@ class ProfileHeaderView: UIView {
         return button
     }()
     
-    @objc func setStatus() {
-        
-        if let text = statusTextField.text
-        {
-            statusLabel.text = text
-        }
-        
-    }
-    
     private var statusLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
@@ -117,7 +108,6 @@ class ProfileHeaderView: UIView {
     
     private func setupView() {
         
-        
         addSubview(lineView)
         addSubview(avatarImage)
         addSubview(nameLabel)
@@ -127,7 +117,6 @@ class ProfileHeaderView: UIView {
         addSubview(pageTitleLabel)
         
         NSLayoutConstraint.activate([
-            
             avatarImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
             avatarImage.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
             avatarImage.heightAnchor.constraint(equalToConstant: 150),
@@ -137,7 +126,7 @@ class ProfileHeaderView: UIView {
             nameLabel.leadingAnchor.constraint(equalTo: avatarImage.trailingAnchor, constant: 20),
             nameLabel.heightAnchor.constraint(lessThanOrEqualToConstant: 20),
             nameLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 110),
-        
+            
             lineView.leftAnchor.constraint(equalTo: leftAnchor, constant: 0),
             lineView.rightAnchor.constraint(equalTo: rightAnchor, constant: 0),
             lineView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
@@ -160,9 +149,14 @@ class ProfileHeaderView: UIView {
             pageTitleLabel.heightAnchor.constraint(equalToConstant: 20),
             pageTitleLabel.bottomAnchor.constraint(equalTo: lineView.topAnchor, constant: -15),
             pageTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
-        
         ])
     }
     
-    
+    @objc func setStatus() {
+        
+        if let text = statusTextField.text
+        {
+            statusLabel.text = text
+        }
+    }
 }
