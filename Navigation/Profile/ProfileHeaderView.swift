@@ -9,7 +9,9 @@ import UIKit
 
 class ProfileHeaderView: UITableViewHeaderFooterView {
     
-    private var avatarImage: UIImageView = {
+    var callback: (() -> ())?
+    
+    private lazy var avatarImage: UIImageView = {
         let imageName = "ava"
         let image = UIImage(named: imageName)
         let imageView = UIImageView(image: image!)
@@ -19,16 +21,25 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         imageView.layer.borderWidth = 3
         imageView.layer.borderColor = CGColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
         imageView.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imagePressed)))
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.isUserInteractionEnabled = true
         
         return imageView
     }()
+    
+    @objc func imagePressed() {
+        
+        callback?()
+    
+    }
     
     private var nameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.text = "Kawaii Dog"
         label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -40,6 +51,7 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         label.text = "Waiting for something..."
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         label.textColor = .gray
+        label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -50,7 +62,6 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         field.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         field.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         field.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
         field.placeholder = "Set status"
         field.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         field.layer.borderWidth = 1
@@ -67,7 +78,6 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         button.backgroundColor = #colorLiteral(red: 0.3195970058, green: 0.5052227378, blue: 0.7235928774, alpha: 1)
         button.setTitle("Set status", for: .normal)
         button.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
-        button.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.layer.cornerRadius = 15
         button.layer.shadowRadius = 4
         button.layer.shadowOffset = (CGSize(width: 4, height: 4))
@@ -107,8 +117,9 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
             
             nameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 27),
             nameLabel.leadingAnchor.constraint(equalTo: avatarImage.trailingAnchor, constant: 20),
-            nameLabel.heightAnchor.constraint(lessThanOrEqualToConstant: 20),
-            nameLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 110),
+            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            //            nameLabel.heightAnchor.constraint(lessThanOrEqualToConstant: 20),
+            //            nameLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 110),
             
             statusLabel.leftAnchor.constraint(equalTo: avatarImage.rightAnchor, constant: 20),
             statusLabel.bottomAnchor.constraint(equalTo: statusButton.topAnchor, constant: -75),

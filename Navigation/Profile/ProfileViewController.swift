@@ -9,14 +9,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    private lazy var profileView: ProfileHeaderView = {
-        let profileHeaderView = ProfileHeaderView()
-        profileHeaderView.backgroundColor = .lightGray
-        profileHeaderView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return profileHeaderView
-    }()
-        
+   
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.backgroundColor = .systemGray6
@@ -43,7 +37,11 @@ class ProfileViewController: UIViewController {
     ]
     
     private var photoModel: [String] = [
-        "1.jpg", "2.jpg", "3.jpg", "4.jpg"]
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +50,11 @@ class ProfileViewController: UIViewController {
     }
     
     private func setupView() {
-
-        title = "Profile"
         
-        view.addSubview(tableView)
+        title = "Profile"
         view.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
         hideKeyboardWhenTappedAround()
+        view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
             
@@ -79,6 +76,12 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
             if let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as? ProfileHeaderView {
+                
+                headerView.callback = { [weak self] in
+                    let vc = AnimationViewController()
+                    self?.navigationController?.pushViewController(vc, animated: false)
+                }
+                
                 return headerView
             } else {
                 return nil
@@ -103,7 +106,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
                 return cell
             }
         } else {
-            // добавляю посты
+            
             if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? PostTableViewCell {
                 let post = self.viewModel[indexPath.row]
                 cell.backgroundColor = .white
