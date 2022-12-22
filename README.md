@@ -1,5 +1,8 @@
-# HomeWork/2.5
+# HomeWork/2.7
 
+# Release
+![Simulator Screen Shot - iPhone 14 Pro Max - 2022-12-22 at 13 06 11](https://user-images.githubusercontent.com/101665702/209110295-595579bd-ab22-4734-98db-ce0072a82c4b.png)
 
-![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-16 at 21 35 44](https://user-images.githubusercontent.com/101665702/202264652-899699df-72f5-439f-855e-83b6018cd44c.png)
-![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-16 at 21 35 48](https://user-images.githubusercontent.com/101665702/202264690-e8663466-e045-46f2-afbe-dab7c4944a4b.png)
+# Debug
+![Simulator Screen Shot - iPhone 14 Pro Max - 2022-12-22 at 13 06 35](https://user-images.githubusercontent.com/101665702/209110306-d49a2fc0-1084-4028-a147-61d8e1e4fbeb.png)
+
