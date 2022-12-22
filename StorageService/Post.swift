@@ -4,10 +4,10 @@
 //
 //  Created by temaathletic on 13.11.2022.
 //
-
+ 
 import Foundation
 
-struct Post {
+public struct Post {
     
     var title: String
     var description: String
