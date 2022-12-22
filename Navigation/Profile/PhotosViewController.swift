@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StorageService
 
 class PhotosViewController: UIViewController {
     
@@ -43,16 +44,10 @@ class PhotosViewController: UIViewController {
     }
     
     private func setupNavigationBar(){
-        //navigationController?.navigationBar.isHidden = false
         navigationItem.title = "Photo Gallery"
         
     }
-    // когда уходим с вью коллекции, скрываем навигатор-бар
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.navigationBar.isHidden = true
-    }
-    // когда приходим на вью коллекции, показываем навигатор-бар
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = false

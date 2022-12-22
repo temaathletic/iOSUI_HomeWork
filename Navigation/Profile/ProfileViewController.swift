@@ -5,12 +5,12 @@
 //  Created by temaathletic on 13.11.2022.
 //
 
+
 import UIKit
+import StorageService
 
 class ProfileViewController: UIViewController {
-    
    
-    
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.backgroundColor = .systemGray6

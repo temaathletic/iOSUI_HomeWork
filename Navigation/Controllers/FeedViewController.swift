@@ -50,7 +50,7 @@ class FeedViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         
         button.addTarget(self, action: #selector(showPost), for: .touchUpInside)
-     
+        
         return button
     }()
     
@@ -84,7 +84,16 @@ class FeedViewController: UIViewController {
         view.addSubview(pageTitleLabel)
         view.addSubview(lineView)
         view.addSubview(stackView)
+        
+        #if DEBUG
+        
+        view.backgroundColor = #colorLiteral(red: 0.8666666667, green: 0.9490196078, blue: 0.9647058824, alpha: 1)
+        
+        #else
+        
         view.backgroundColor = #colorLiteral(red: 0.9442123175, green: 0.9491845965, blue: 0.9663036466, alpha: 1)
+        
+        #endif
         
         NSLayoutConstraint.activate([
             
@@ -108,7 +117,7 @@ class FeedViewController: UIViewController {
         let postScene = PostViewController()
         self.navigationController?.pushViewController(postScene, animated: true)
     }
-
+    
 }
 
 
