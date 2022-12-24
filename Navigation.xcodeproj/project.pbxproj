@@ -13,6 +13,9 @@
 		844713602926B222005C6650 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447135F2926B221005C6650 /* AnimationViewController.swift */; };
 		845103AF2924E65C000403B7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845103AE2924E65C000403B7 /* LogInViewController.swift */; };
 		845103B1292515C4000403B7 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845103B0292515C4000403B7 /* PostTableViewCell.swift */; };
+		8494610229573DC100D1CB77 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494610129573DC100D1CB77 /* User.swift */; };
+		84946104295741D200D1CB77 /* CurrentUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84946103295741D200D1CB77 /* CurrentUserService.swift */; };
+		84946106295741E000D1CB77 /* TestUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84946105295741E000D1CB77 /* TestUserService.swift */; };
 		84BA4F7B292125E100CE8C7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA4F7A292125E100CE8C7E /* AppDelegate.swift */; };
 		84BA4F7D292125E100CE8C7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA4F7C292125E100CE8C7E /* SceneDelegate.swift */; };
 		84BA4F7F292125E100CE8C7E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA4F7E292125E100CE8C7E /* FeedViewController.swift */; };
@@ -89,6 +92,9 @@
 		845103AE2924E65C000403B7 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		845103B0292515C4000403B7 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		8462ED61D5FB6EFF44B7AA05 /* Pods-StorageService-StorageServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorageService-StorageServiceTests.release.xcconfig"; path = "Target Support Files/Pods-StorageService-StorageServiceTests/Pods-StorageService-StorageServiceTests.release.xcconfig"; sourceTree = "<group>"; };
+		8494610129573DC100D1CB77 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		84946103295741D200D1CB77 /* CurrentUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserService.swift; sourceTree = "<group>"; };
+		84946105295741E000D1CB77 /* TestUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserService.swift; sourceTree = "<group>"; };
 		84BA4F77292125E100CE8C7E /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BA4F7A292125E100CE8C7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BA4F7C292125E100CE8C7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +169,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8494610029573D9900D1CB77 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				8494610129573DC100D1CB77 /* User.swift */,
+				84946103295741D200D1CB77 /* CurrentUserService.swift */,
+				84946105295741E000D1CB77 /* TestUserService.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		84BA4F6E292125E100CE8C7E = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				84BA4F902921261200CE8C7E /* Application */,
+				8494610029573D9900D1CB77 /* User */,
 				84BA4FA129217ED200CE8C7E /* Profile */,
 				84BA4F8F2921260300CE8C7E /* Controllers */,
 				84BA4F962921295700CE8C7E /* Resource */,
@@ -556,14 +573,17 @@
 				84BA4F7F292125E100CE8C7E /* FeedViewController.swift in Sources */,
 				84BA4F9A292129B900CE8C7E /* PostViewController.swift in Sources */,
 				84BA4F9E29213A5000CE8C7E /* InfoViewController.swift in Sources */,
+				84946104295741D200D1CB77 /* CurrentUserService.swift in Sources */,
 				84CA5545292559690005F932 /* PhotosTableViewCell.swift in Sources */,
 				84CA5547292559CE0005F932 /* PhotosViewController.swift in Sources */,
 				844713602926B222005C6650 /* AnimationViewController.swift in Sources */,
+				84946106295741E000D1CB77 /* TestUserService.swift in Sources */,
 				845103AF2924E65C000403B7 /* LogInViewController.swift in Sources */,
 				84BA4F9C292138C100CE8C7E /* UIColor + Extensions.swift in Sources */,
 				84CA554929255B660005F932 /* PhotosCollectionViewCell.swift in Sources */,
 				84BA4F7B292125E100CE8C7E /* AppDelegate.swift in Sources */,
 				84BA4F7D292125E100CE8C7E /* SceneDelegate.swift in Sources */,
+				8494610229573DC100D1CB77 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

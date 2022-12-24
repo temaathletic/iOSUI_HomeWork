@@ -29,8 +29,6 @@ class PostTableViewCell: UITableViewCell {
         image.backgroundColor = .black
         image.translatesAutoresizingMaskIntoConstraints = false
         
-        
-        
         return image
     }()
     
@@ -147,12 +145,17 @@ class PostTableViewCell: UITableViewCell {
     }
     
     func setupPosts(for model: Post) {
+        
         titlePostLabel.text = model.title
         descriptionPostLabel.text = model.description
-        ImageProcessor().processImage(sourceImage: UIImage(named: model.image)!, filter: .fade) { imagePostView.image = $0 }
-//        imagePostView.image = UIImage(named: model.image)
         likePostLabel.text = "\(model.likes)"
         viewPostLabel.text = "\(model.views)"
+        
+        if let image = UIImage(named: model.image) {
+                    ImageProcessor().processImage(sourceImage: image, filter: .fade) { imagePostView.image = $0 }
+                } else {
+                    print("file not found")
+                }
     }
     
     
