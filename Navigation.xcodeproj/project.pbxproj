@@ -208,7 +208,6 @@
 				8494610029573D9900D1CB77 /* User */,
 				84BA4FA129217ED200CE8C7E /* Profile */,
 				84BA4F8F2921260300CE8C7E /* Controllers */,
-				84BA4F962921295700CE8C7E /* Resource */,
 				84BA4F952921277F00CE8C7E /* Extensions */,
 				84BA4F8E292125EC00CE8C7E /* HelpingFiles */,
 			);
@@ -253,13 +252,6 @@
 				844011C42925668700BA34BA /* HideKeyboard + Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		84BA4F962921295700CE8C7E /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		84BA4FA129217ED200CE8C7E /* Profile */ = {
