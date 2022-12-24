@@ -63,7 +63,7 @@ class LogInViewController: UIViewController {
         stackView.layer.borderWidth = 1
         
         stackView.addArrangedSubview(logInTextField)
-        stackView.addArrangedSubview(passwordrTextField)
+        stackView.addArrangedSubview(passwordTextField)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         return stackView
@@ -86,7 +86,7 @@ class LogInViewController: UIViewController {
         return field
     }()
     
-    private lazy var passwordrTextField: UITextField = {
+    private lazy var passwordTextField: UITextField = {
         let field = UITextField()
         field.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         field.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -125,12 +125,12 @@ class LogInViewController: UIViewController {
             
             textFieldStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             textFieldStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            passwordrTextField.heightAnchor.constraint(equalToConstant: 50),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 50),
             logInTextField.heightAnchor.constraint(equalToConstant: 50),
             textFieldStackView.heightAnchor.constraint(equalToConstant: 100),
             textFieldStackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
             textFieldStackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16),
-        
+            
             buttonStackView.topAnchor.constraint(equalTo: textFieldStackView.bottomAnchor, constant: 20),
             buttonStackView.heightAnchor.constraint(equalToConstant: 80),
             buttonStackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
@@ -139,8 +139,41 @@ class LogInViewController: UIViewController {
     }
     
     @objc private func pushToView() {
-        let postScene = ProfileViewController()
-        self.navigationController?.pushViewController(postScene, animated: true)
+        
+        if ( (logInTextField.text != "") && (passwordTextField.text != "") ) {
+            
+            let user = User(login: logInTextField.text!, password: passwordTextField.text!, fullName: "Artem Zaytsev", avatar: UIImage(named: "ava")!, status: "Back at it again")
+            
+            #if DEBUG
+            let checkForUser = TestUserService(user: user)
+            #else
+            let checkForUser = CurrentUserService(user: user)
+            #endif
+            
+            
+            if ( checkForUser.checkUser(for: user.login, and: user.password)?.login == user.login &&
+                 checkForUser.checkUser(for: user.login, and: user.password)?.password == user.password ) {
+                
+                
+                let pushToView = ProfileViewController(user: checkForUser.checkUser(for: user.login, and: user.password)!)
+                pushToView.modalPresentationStyle = .currentContext
+                navigationController?.pushViewController(pushToView, animated: true)
+                
+            } else {
+                
+                let alarm = UIAlertController(title: Constants.alertNotCorrectLoginTitle, message: Constants.alertNotCorrectLoginText, preferredStyle: .alert)
+                let alarmAction = UIAlertAction(title: Constants.alertNotCorrectLoginAction, style: .default)
+                alarm.addAction(alarmAction)
+                present(alarm, animated: true)
+            }
+            
+        } else {
+            
+            let alarm = UIAlertController(title: Constants.alertNotEnteredDataTitle, message: Constants.alertNotEnteredDataText, preferredStyle: .alert)
+            let alarmAction = UIAlertAction(title: Constants.alertNotEnteredDataAction, style: .default)
+            alarm.addAction(alarmAction)
+            present(alarm, animated: true)
+        }
     }
 }
 
