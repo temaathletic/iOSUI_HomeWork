@@ -9,6 +9,8 @@ import UIKit
 
 class LogInViewController: UIViewController {
     
+    var loginDelegate: LoginViewControllerDelegate?
+    
     private var imageView: UIImageView = {
         let imageName = "logo"
         let image = UIImage(named: imageName)

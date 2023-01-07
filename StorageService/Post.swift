@@ -43,7 +43,7 @@ public let post4 = Post(title: "World Champpionship, Doha 2019",
 
 public let post5 = Post(title: "Obladaet - On Air",
                  description: "Назар Вотяков, более известный под сценическим псевдонимом Obladáet, — российский хип-хоп-исполнитель и автор песен, ныне проживающий в Санкт-Петербурге. В своей дискографии имеет 4 студийных альбома, 2 мини-альбома, 1 совместный мини-альбом и множество синглов.",
-                 image: "Music",
+                 image: "music",
                  likes: Int.random(in: 1...1000),
                  views: Int.random(in: 1...10000))
 

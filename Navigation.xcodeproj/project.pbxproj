@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7DB731052674773B15E3EEF9 /* Pods_Navigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F871EA804A053BC9DCCA26 /* Pods_Navigation.framework */; };
+		84010A5A296A116800B90EAC /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84010A59296A116800B90EAC /* Checker.swift */; };
+		84010A5C296A14A100B90EAC /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84010A5B296A14A100B90EAC /* LoginFactory.swift */; };
 		842DAD8F29560A6B00D30DBF /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 842DAD8E29560A6B00D30DBF /* iOSIntPackage */; };
 		844011C52925668700BA34BA /* HideKeyboard + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844011C42925668700BA34BA /* HideKeyboard + Extensions.swift */; };
 		844713602926B222005C6650 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447135F2926B221005C6650 /* AnimationViewController.swift */; };
@@ -87,6 +89,8 @@
 		26EBB4133EC96AAF9BC3C37D /* Pods-StorageService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorageService.release.xcconfig"; path = "Target Support Files/Pods-StorageService/Pods-StorageService.release.xcconfig"; sourceTree = "<group>"; };
 		5A5CD1B4735D59D445D085B5 /* Pods-StorageService-StorageServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorageService-StorageServiceTests.debug.xcconfig"; path = "Target Support Files/Pods-StorageService-StorageServiceTests/Pods-StorageService-StorageServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D68247874FEAA69FD521675 /* Pods-StorageService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorageService.debug.xcconfig"; path = "Target Support Files/Pods-StorageService/Pods-StorageService.debug.xcconfig"; sourceTree = "<group>"; };
+		84010A59296A116800B90EAC /* Checker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
+		84010A5B296A14A100B90EAC /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		844011C42925668700BA34BA /* HideKeyboard + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HideKeyboard + Extensions.swift"; sourceTree = "<group>"; };
 		8447135F2926B221005C6650 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		845103AE2924E65C000403B7 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +173,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		84010A58296A115900B90EAC /* Checker */ = {
+			isa = PBXGroup;
+			children = (
+				84010A59296A116800B90EAC /* Checker.swift */,
+				84010A5B296A14A100B90EAC /* LoginFactory.swift */,
+			);
+			path = Checker;
+			sourceTree = "<group>";
+		};
 		8494610029573D9900D1CB77 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +219,7 @@
 			children = (
 				84BA4F902921261200CE8C7E /* Application */,
 				8494610029573D9900D1CB77 /* User */,
+				84010A58296A115900B90EAC /* Checker */,
 				84BA4FA129217ED200CE8C7E /* Profile */,
 				84BA4F8F2921260300CE8C7E /* Controllers */,
 				84BA4F952921277F00CE8C7E /* Extensions */,
@@ -558,6 +572,7 @@
 				844011C52925668700BA34BA /* HideKeyboard + Extensions.swift in Sources */,
 				84BA4FA0292149DD00CE8C7E /* UIViewController + Extensions.swift in Sources */,
 				84CA554B29255EC00005F932 /* Constants.swift in Sources */,
+				84010A5A296A116800B90EAC /* Checker.swift in Sources */,
 				84BA4F922921275000CE8C7E /* TabBarVIewController.swift in Sources */,
 				845103B1292515C4000403B7 /* PostTableViewCell.swift in Sources */,
 				84BA4FA329217F0600CE8C7E /* ProfileHeaderView.swift in Sources */,
@@ -570,6 +585,7 @@
 				84CA5547292559CE0005F932 /* PhotosViewController.swift in Sources */,
 				844713602926B222005C6650 /* AnimationViewController.swift in Sources */,
 				84946106295741E000D1CB77 /* TestUserService.swift in Sources */,
+				84010A5C296A14A100B90EAC /* LoginFactory.swift in Sources */,
 				845103AF2924E65C000403B7 /* LogInViewController.swift in Sources */,
 				84BA4F9C292138C100CE8C7E /* UIColor + Extensions.swift in Sources */,
 				84CA554929255B660005F932 /* PhotosCollectionViewCell.swift in Sources */,

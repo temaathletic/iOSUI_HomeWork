@@ -16,14 +16,15 @@ extension UIViewController {
                                                 preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        let okAction = UIAlertAction(title: "Ok", style: .default)
-    
+        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            print("Hello")
+        }
+        
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)
         
         present(alertController, animated: true)
     }
 }
-
 
 
