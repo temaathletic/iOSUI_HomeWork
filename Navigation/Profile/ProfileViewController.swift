@@ -58,6 +58,21 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+        let newBackButton = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.backAction(sender:)))
+        self.navigationItem.leftBarButtonItem = newBackButton
+    }
+    
+    @objc func backAction(sender: UIBarButtonItem) {
+
+        let alertController = UIAlertController(title: "Are You Sure?", message: "If You Proceed, All Data On This Page Will Be Lost", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { (result : UIAlertAction) -> Void in
+            self.navigationController?.popViewController(animated: true)
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        alertController.addAction(cancelAction)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true)
     }
     
     private func setupView() {

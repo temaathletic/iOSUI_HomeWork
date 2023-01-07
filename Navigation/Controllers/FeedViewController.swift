@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class FeedViewController: UIViewController {
     
@@ -53,21 +54,12 @@ class FeedViewController: UIViewController {
         
         return button
     }()
-    
-    private var lineView: UIView = {
-        var lineView = UIView()
-        lineView.layer.borderWidth = 1.0
-        lineView.layer.borderColor = UIColor.gray.cgColor
-        lineView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return lineView
-    }()
-    
+
     private lazy var pageTitleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.text = "Feed"
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -82,7 +74,6 @@ class FeedViewController: UIViewController {
     private func setupView() {
         
         view.addSubview(pageTitleLabel)
-        view.addSubview(lineView)
         view.addSubview(stackView)
         
         #if DEBUG
@@ -95,17 +86,12 @@ class FeedViewController: UIViewController {
         
         #endif
         
+        pageTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(view).inset(65)
+            make.centerX.equalToSuperview()
+        }
+        
         NSLayoutConstraint.activate([
-            
-            lineView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
-            lineView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
-            lineView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            lineView.heightAnchor.constraint(equalToConstant: 1),
-            
-            pageTitleLabel.heightAnchor.constraint(equalToConstant: 20),
-            pageTitleLabel.bottomAnchor.constraint(equalTo: lineView.topAnchor, constant: -15),
-            pageTitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             stackView.heightAnchor.constraint(equalToConstant: 100),
