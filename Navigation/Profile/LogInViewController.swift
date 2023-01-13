@@ -81,6 +81,7 @@ class LogInViewController: UIViewController {
         field.layer.cornerRadius = 12
         field.layer.borderWidth = 1
         field.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        field.autocapitalizationType = .none
         field.leftViewMode = .always
         field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 45))
         field.translatesAutoresizingMaskIntoConstraints = false

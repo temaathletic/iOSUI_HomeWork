@@ -19,12 +19,17 @@ class TabBarVIewController: UITabBarController {
     
     private func setupTabBarItem() {
         
+        let secondVC = LogInViewController()
+        let loginInspectorCreaterByFabric = MyLoginFactory()
+        secondVC.loginDelegate = loginInspectorCreaterByFabric.makeLoginInspector()
+        let secondVCForShowing = UINavigationController(rootViewController: secondVC)
+        
         viewControllers = [
             
             createTabBarItem(viewController: FeedViewController(),
                              title: "Feed",
                              image: UIImage(systemName: "newspaper.circle.fill"), pageName: "Feed"),
-            createTabBarItem(viewController: LogInViewController(),
+            createTabBarItem(viewController: secondVCForShowing,
                              title: "Profile",
                              image: UIImage(systemName: "person.circle.fill"), pageName: "Profile")
         ]

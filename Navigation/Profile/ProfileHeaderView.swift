@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class ProfileHeaderView: UITableViewHeaderFooterView {
-    
+
     var callback: (() -> ())?
     
     private lazy var avatarImage: UIImageView = {
@@ -38,7 +38,7 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
     private var nameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
-        label.text = "Kawaii Dog"
+        label.text = ""
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
